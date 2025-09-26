@@ -24,9 +24,7 @@ public class LectorResultadosLaboratorio {
             PDFRenderer pdfRenderer = new PDFRenderer(documento);
             Tesseract tesseract = new Tesseract();
 
-            // === CORRECCIÓN APLICADA AQUÍ ===
-            // Reemplaza esta ruta por la ubicación de tu carpeta "tessdata"
-            tesseract.setDatapath("/usr/share/tesseract-ocr/5/tessdata/"); // Cambia esta línea
+            tesseract.setDatapath("/usr/share/tesseract-ocr/5/tessdata/");
 
             tesseract.setLanguage("spa");
 
@@ -46,7 +44,6 @@ public class LectorResultadosLaboratorio {
 
         System.out.println("\n--- Texto extraído (en crudo) ---\n" + textoCompleto);
 
-        // El resto del código para analizar el texto sigue igual...
         String patronRegex = "([A-Z\\s]+)\\s+([\\d.]+)";
         Pattern patron = Pattern.compile(patronRegex);
         Matcher matcher = patron.matcher(textoCompleto.toString());
