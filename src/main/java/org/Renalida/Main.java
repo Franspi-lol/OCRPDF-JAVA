@@ -9,8 +9,9 @@ public class Main {
     public static void main(String[] args) {
         // Reemplaza esta ruta con la ubicación real de tu archivo PDF
         String rutaDelArchivo = "src/labotest1.pdf";
+        String rutaDelArchivo1 = "src/labbcorp1.pdf";
 
-        Map<String, Double> datosLimpios = extraerDatos(rutaDelArchivo);
+        Map<String, Double> datosLimpios = extraerDatos(rutaDelArchivo1);
 
         if (datosLimpios != null && !datosLimpios.isEmpty()) {
             System.out.println("\n--- Resultados Limpios y Estructurados ---");
